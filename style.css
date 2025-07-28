@@ -5,11 +5,13 @@
 
 html {
     scroll-behavior: smooth;
+
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     background-color: rgb(54, 23, 23);
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -37,10 +39,10 @@ body {
 .nav-right ul {
     display: flex;
     list-style: none;
-    gap: 1vw;
+    gap: 1rem;
 }
 
-.nav-right ul li a {
+.nav-right a {
     text-decoration: none;
     font-weight: 500;
     color: white;
@@ -189,8 +191,8 @@ body {
     font-weight: 600;
     color: white;
     margin-bottom: 4vh;
-    
-    
+
+
 }
 
 .card {
@@ -204,8 +206,8 @@ body {
 }
 
 .Drink img {
-    width: 13vw;
-    height: auto;
+    width: auto;
+    height: 30vh;
     margin-bottom: 1rem;
 }
 
@@ -230,7 +232,7 @@ body {
 
 .testimonials {
     background-color: white;
-    border-bottom:2px solid black ;
+    border-bottom: 2px solid black;
 }
 
 .testimonials h2 {
@@ -246,8 +248,8 @@ body {
     max-width: 20vw;
     text-align: center;
     transition: transform 0.3s ease;
-     padding-top: 1rem;
-     padding-bottom: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
 }
 
 .profile:hover {
@@ -255,10 +257,11 @@ body {
 }
 
 .profile img {
-    width: 15vw;
+    width: 17vw;
+    height: 35vh;
     border: 2px solid black;
-    border-radius: 100%;
-    height: auto;
+    border-radius: 50%;
+
     margin-bottom: 1rem;
 }
 
@@ -272,7 +275,9 @@ body {
 
 .gallery {
     background-color: white;
- padding-top:2rem;
+    padding-top: 2rem;
+
+
 }
 
 .gallery h2 {
@@ -286,17 +291,18 @@ body {
 
 
 .gallery-grid {
+
     transition: transform 0.3s ease;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    padding-left: 7.5rem;
+    padding: 0 2rem;
+    width: 100%;
 }
 
 .gallery img {
     border: 1px solid black;
     border-radius: 10%;
-    width: 20vw;
+    width: 400px;
     height: auto;
     margin-bottom: 1rem;
 
@@ -341,7 +347,7 @@ body {
 
 .contact-info {
     padding-left: 10vw;
-    width: 40%;    
+    width: 40%;
     color: #4b2e2e;
     text-align: left;
 }
@@ -391,7 +397,7 @@ body {
     background-color: #8b4513;
 }
 
-.footer{
+.footer {
     padding-top: 2vh;
     height: 7vh;
     background-color: #191715;
@@ -399,86 +405,97 @@ body {
     display: flex;
     justify-content: space-around;
 }
-.left h3{
+
+.left h3 {
     font-weight: 200;
 }
+
 .middle a {
-  margin: 0 0.5rem;
-  font-size: 1.3rem;
-  color: white;
-  transition: color 0.3s;
+    margin: 0 0.5rem;
+    font-size: 1.3rem;
+    color: white;
+    transition: color 0.3s;
 }
+
 .middle a:hover {
-  color: #a0522d;
+    color: #a0522d;
 }
-.middle{
+
+.middle {
     text-align: center;
 }
 
-.right{
-    
+.right {
+
     display: flex;
-   gap: 1rem;
+    gap: 1rem;
 }
-.right h3{
+
+.right h3 {
     font-weight: 200;
 }
-.right p{
+
+.right p {
     margin-top: -1rem;
     font-size: 2rem;
 }
 
 @media (max-width: 1024px) {
+
     /* For Tablets */
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .nav-right ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
     .hero {
         flex-direction: column;
         text-align: center;
         padding-top: 20vh;
     }
-    .hero-left, .hero-right {
+
+    .hero-left,
+    .hero-right {
         width: 90%;
         margin: 0 auto;
     }
-    .photo, .text {
+
+    .photo,
+    .text {
         width: 90%;
         text-align: center;
         padding: 2rem 0;
     }
+
     .about {
         flex-direction: column;
         align-items: center;
     }
+
     .multi-card {
         grid-template-columns: repeat(2, 1fr);
         padding-left: 0;
         justify-items: center;
     }
+
     .all-profile {
         grid-template-columns: repeat(2, 1fr);
         padding-left: 0;
         justify-items: center;
     }
+
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         padding-left: 0;
         justify-items: center;
     }
+
     .contact-container {
         flex-direction: column;
         align-items: center;
     }
-    .contact-info, .details {
+
+    .contact-info,
+    .details {
         width: 90%;
         padding-left: 0;
     }
+
     .footer {
         flex-direction: column;
         align-items: center;
@@ -486,6 +503,7 @@ body {
         gap: 1rem;
         padding-bottom: 2rem;
     }
+
     .right {
         flex-direction: column;
         align-items: center;
@@ -493,6 +511,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
     /* For Mobile */
     .nav-right ul {
         flex-direction: column;
@@ -500,21 +519,29 @@ body {
         width: 100%;
         padding-left: 1rem;
     }
+
     .hero-left h1 {
         font-size: 1.8rem;
     }
+
     .hero-left span {
         font-size: 1.3rem;
     }
-    .multi-card, .all-profile, .gallery-grid {
+
+    .multi-card,
+    .all-profile,
+    .gallery-grid {
         grid-template-columns: 1fr;
     }
+
     .gallery img,
     .Drink img,
     .profile img {
         width: 60vw;
     }
-    .card, .profile {
+
+    .card,
+    .profile {
         max-width: 80vw;
     }
 }
